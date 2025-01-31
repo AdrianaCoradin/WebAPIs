@@ -10,7 +10,7 @@ using WebAPIs.Data;
 
 namespace WebAPIs.Migrations
 {
-    [DbContext(typeof(SistemaTaferasDBContext))]
+    [DbContext(typeof(SistemaTarefasDBContext))]
     [Migration("20240904231645_InitialDB")]
     partial class InitialDB
     {

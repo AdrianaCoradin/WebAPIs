@@ -7,8 +7,8 @@ namespace WebAPIs.Repositorios
 {
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
-        private readonly SistemaTaferasDBContext _dbContext;
-        public UsuarioRepositorio(SistemaTaferasDBContext sistemaTaferasDBContext) 
+        private readonly SistemaTarefasDBContext _dbContext;
+        public UsuarioRepositorio(SistemaTarefasDBContext sistemaTaferasDBContext) 
         {
             _dbContext = sistemaTaferasDBContext;
 

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAPIs.Data;
 
@@ -10,9 +11,11 @@ using WebAPIs.Data;
 namespace WebAPIs.Migrations
 {
     [DbContext(typeof(SistemaTarefasDBContext))]
-    partial class SistemaTaferasDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250130004733_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

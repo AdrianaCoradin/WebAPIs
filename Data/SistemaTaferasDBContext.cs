@@ -4,9 +4,9 @@ using WebAPIs.Models;
 
 namespace WebAPIs.Data
 {
-    public class SistemaTaferasDBContext : DbContext
+    public class SistemaTarefasDBContext : DbContext
     {
-        public SistemaTaferasDBContext(DbContextOptions<SistemaTaferasDBContext> options)
+        public SistemaTarefasDBContext(DbContextOptions<SistemaTarefasDBContext> options)
         : base(options)
         
         {

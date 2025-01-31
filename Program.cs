@@ -20,11 +20,13 @@ namespace WebAPIs
             builder.Services.AddSwaggerGen();
 
             //Conexão com o bd
-            builder.Services.AddEntityFrameworkSqlServer()
-                .AddDbContext<SistemaTaferasDBContext>(
-                    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
-                );
-            // Config dependências repositório
+            builder.Services.AddDbContext<SistemaTarefasDBContext>(options =>
+            {
+                options.UseSqlServer("Data source=DESKTOP-CR06JKF\\SQLSERVER;Initial Catalog=SistemaTarefasDBContext;User Id=sa;Password=adri;TrustServerCertificate=True;MultipleActiveResultSets=true");
+            });
+
+
+            builder.Services.AddScoped<ITarefaRepositorio, TarefaRepositorio>();
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
 
